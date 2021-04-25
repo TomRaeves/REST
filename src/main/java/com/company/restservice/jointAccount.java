@@ -10,7 +10,17 @@ public class jointAccount extends Account {
     }
 
     @Override
+    public float getBalance(){
+        return acc.getBalance();
+    }
+
+    @Override
     public void addMoney(float money) {
         acc.addMoney(money);
+    }
+
+    @Override
+    public boolean getMoney(float money){
+        return acc.getMoney(money);
     }
 }

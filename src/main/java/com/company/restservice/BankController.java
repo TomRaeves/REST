@@ -26,7 +26,7 @@ public class BankController {
         if(Bank.getInstance().getAccount(accID).getMoney(amount))
             return "Money withdrawn!";
         else
-            return "Balance insufficient!";
+            return "Balance insufficient or account is in use!";
     }
 
 }

@@ -18,17 +18,20 @@ public class Account {
         if(busy)
             return false;
             //somebody is already getting money from this account at this moment
+        else {
+            busy = true;
+            try {
+                Thread.sleep(5000);
+            } catch (Exception e) {}
 
-        busy = true;
-        if(balance >= money) {
-            balance -= money;
-
-        try{ Thread.sleep(5000);
-        }catch (Exception e){}
-
-        busy = false;
-            return true;
-        } else {return false;}
+            if (balance >= money) {
+                balance -= money;
+                busy = false;
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 
     public void addMoney(float money){
