@@ -8,9 +8,9 @@ public class BankController {
     //https://codereview.stackexchange.com/questions/231594/simple-banking-application-in-spring-boot-jpa-rest-where-balance-can-be-transf
 
     @GetMapping(value = "/balance/{id}")
-    float getBalance(@PathVariable Integer accID)
+    float getBalance(@PathVariable Integer id)
     {
-        return Bank.getInstance().getAccount(accID).getBalance();
+        return Bank.getInstance().getAccount(id).getBalance();
     }
 
     @PutMapping(value = "/addMoney/{accID}/{amount}")
