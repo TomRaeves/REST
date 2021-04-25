@@ -14,10 +14,6 @@ public class Account {
         return balance;
     }
 
-    public void setBalance(float balance){
-        this.balance = balance;
-    }
-
     public boolean getMoney(float money){
         if(busy)
             return false;
