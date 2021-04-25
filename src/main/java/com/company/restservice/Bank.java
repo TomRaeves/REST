@@ -10,16 +10,11 @@ public class Bank {
     public Bank(){
         this.accDatabase = new HashMap<>();
         this.accDatabase.put(counter,new Account(1));
-        Bank.getInstance().getAccount(1).addMoney(100);
+        //Bank.getInstance().getAccount(1).addMoney(100);
     }
 
     public Account getAccount(int accID)
     {return this.accDatabase.get(accID);}
-
-    public void newAccount(int accID){
-        counter++;
-        this.accDatabase.put(counter, new Account(accID));
-    }
 
     private static Bank instance;
     public static Bank getInstance(){ //Singleton, there is only 1 bank

@@ -13,12 +13,6 @@ public class BankController {
         return Bank.getInstance().getAccount(accID).getBalance();
     }
 
-    @PostMapping(value = "/newAccount/{accID}")
-    void newAccount(@PathVariable Integer accID)
-    {
-        Bank.getInstance().newAccount(accID);
-    }
-
     @PutMapping(value = "/addMoney/{accID}/{amount}")
     float addMoney(@PathVariable Integer accID, @PathVariable(value = "amount") int amount)
     {
